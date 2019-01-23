@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+<form action="login" method="post">
+<button type="submit" value="login">Login</button>
+</form>
+</body>
+</html>

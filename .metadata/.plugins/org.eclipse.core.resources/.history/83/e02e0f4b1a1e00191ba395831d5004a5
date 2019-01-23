@@ -1,0 +1,18 @@
+package com.bridgelabz.servlets;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class RegistrationPage extends HttpServlet {
+		public void doPost(HttpServletRequest request, HttpServletResponse response) {
+			User user=new User();
+			user.setFirstName(request.getParameter("firstName"));
+			user.setLastName(request.getParameter("lastName"));
+			user.setContact(request.getParameter(contact));
+			us
+		}
+}

@@ -1,0 +1,50 @@
+package com.bridgelabz.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/login")
+public class LoginPage extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		response.setContentType("text/html");
+		PrintWriter printWriter = response.getWriter();
+		printWriter.write("<html><body><div id='serlvetResponse' style='text-align:center;'>");
+		RequestDispatcher requestDispatcher = null;
+		if (username == null || password == null || "".equals(username) || "".equals(password)) {
+			printWriter.write(
+					"<p id='errorMsg' style='color: red; font-size: larger;'>Please Enter Both Username & Password... !</p>");
+			requestDispatcher = request.getRequestDispatcher("/index.html");
+			requestDispatcher.include(request, response);
+		} else {
+			System.out.println("Username = " + username + ", Password = " + password);
+		}
+		 if((username.equalsIgnoreCase("nik")) && (password.equals("nik@123"))) {
+			 
+			 	                requestDispatcher = request.getRequestDispatcher("/welcome");
+			 
+			 	                requestDispatcher.forward(request, response);                   
+			 
+			 	            } else {
+			 
+			 	                printWriter.write("<p id='errMsg' style='color: red; font-size: larger;'>You are not an authorised user! Please check with administrator!</p>");
+			 
+			 	                requestDispatcher = request.getRequestDispatcher("/index.html");
+			 
+			 	                requestDispatcher.include(request, response);
+			 
+			 	            }           
+			 
+			 	        }
+			 
+}

@@ -1,0 +1,28 @@
+package com.bridgelabz.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class LogoutPage extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		response.setContentType("text/html");
+		PrintWriter printWriter = response.getWriter();
+
+		RequestDispatcher requestDispatcher=request.getRequestDispatcher("/login.html");
+		requestDispatcher.forward(request, response);
+		HttpSession session = request.getSession(false);
+		session.invalidate();
+
+		printWriter.print("You are successfully logged out!");
+
+		printWriter.close();
+	}
+}
