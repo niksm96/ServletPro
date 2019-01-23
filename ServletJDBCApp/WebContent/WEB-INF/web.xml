@@ -12,7 +12,7 @@
   
   <servlet>
   <servlet-name> LoginServlet</servlet-name>
-  <servlet-class>com.bridgelabz.servlets.LoginPage</servlet-class>
+  <servlet-class>com.bridgelabz.servlet.LoginPage</servlet-class>
   </servlet>
   <servlet-mapping>
   <servlet-name>LoginServlet</servlet-name>
@@ -20,7 +20,7 @@
   </servlet-mapping>
   <servlet>
   <servlet-name>RegistrationServlet</servlet-name>
-  <servlet-class>com.bridgelabz.servlets.RegistrationPage</servlet-class>
+  <servlet-class>com.bridgelabz.servlet.RegistrationPage</servlet-class>
   </servlet>
   <servlet-mapping>
   <servlet-name>RegistrationServlet</servlet-name>
@@ -28,10 +28,18 @@
   </servlet-mapping>
   <servlet>
   <servlet-name> LogoutServlet</servlet-name>
-  <servlet-class>com.bridgelabz.servlets.LogoutPage</servlet-class>
+  <servlet-class>com.bridgelabz.servlet.LogoutPage</servlet-class>
   </servlet>
   <servlet-mapping>
   <servlet-name>LogoutServlet</servlet-name>
   <url-pattern>/logout</url-pattern>
   </servlet-mapping>
+  <filter>
+  <filter-name>Validation</filter-name>
+  <filter-class>com.bridgelabz.filter.Validation</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>Validation</filter-name>
+  <url-pattern>/login</url-pattern>
+  </filter-mapping>
 </web-app>

@@ -722,3 +722,116 @@ java.lang.Exception: The resource tree is locked for modifications.
 
 !ENTRY org.eclipse.wst.server.core 4 0 2019-01-22 18:30:26.387
 !MESSAGE Server Tomcat v8.5 Server at localhost failed to start.
+!SESSION 2019-01-23 10:14:19.524 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface.text 2 0 2019-01-23 10:54:08.813
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2019-01-23 11:35:42.928
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/usssdk/drops/nightly/N856.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:398)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:353)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:244)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:168)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:770)
+	at sun.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:168)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:770)
+	at sun.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2019-01-23 11:35:42.930
+!MESSAGE No repository found at http://download.eclipse.org/usssdk/drops/nightly/N856.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-01-23 12:54:56.265
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 16:21:10.653
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 16:24:40.413
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 16:28:12.696
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 16:28:30.435
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 16:29:07.879
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 16:42:39.341
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 17:24:48.962
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 17:29:25.268
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 17:29:57.165
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 17:32:11.337
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 17:33:09.186
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 17:33:34.987
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 17:33:44.047
+!MESSAGE Could not load the Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config. The Servers project is closed.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-01-23 17:34:22.154
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v8.5 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.wst.server.core 4 0 2019-01-23 17:34:50.750
+!MESSAGE Server Tomcat v8.5 Server at localhost failed to start.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2019-01-23 17:35:03.744
+!MESSAGE Server Tomcat v8.5 Server at localhost failed to start.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-01-23 18:59:09.524
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
