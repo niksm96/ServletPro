@@ -40,6 +40,6 @@
   </filter>
   <filter-mapping>
   <filter-name>Validation</filter-name>
-  <url-pattern>/login</url-pattern>
+  <url-pattern>/register</url-pattern>
   </filter-mapping>
 </web-app>
