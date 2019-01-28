@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,11 +32,16 @@ public class LoginPage extends HttpServlet {
 			if (result) {
 				HttpSession session=request.getSession();  
 			    session.setAttribute("name",username);  
-				requestDispatcher=request.getRequestDispatcher("/logout.html");
-				requestDispatcher.forward(request, response);
+			    session.setMaxInactiveInterval(30*60);
+				Cookie ck=new Cookie("uname", username);
+				ck.setMaxAge(30*60);
+				response.addCookie(ck);
+//				requestDispatcher=request.getRequestDispatcher("/logout.html");
+//				requestDispatcher.forward(request, response);
+				response.sendRedirect("index.jsp");
 			} else {
+				requestDispatcher = request.getServletContext().getRequestDispatcher("/Index.html");
 				printWriter.println("You are not authorized user, please sign up!");
-				requestDispatcher = request.getRequestDispatcher("/Index.html");
 				requestDispatcher.include(request, response);
 			}
 		}catch(Exception e) {

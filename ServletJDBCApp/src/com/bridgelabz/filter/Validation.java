@@ -14,9 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class Validation implements Filter {
-	 static final String REGEX_EMAIL_ID = "^[a-z0-9._%-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
+	 static final String REGEX_EMAIL_ID = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,6}$";
 	 static final String REGEX_PASSWORD = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
-	 static final String REGEX_CONTACT = "^[0-9]{10}$";
+	 static final String REGEX_CONTACT = "^((\\+){1}91){1}[1-9]{1}[0-9]{9}$";
 	
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {}
