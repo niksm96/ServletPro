@@ -1,7 +1,0 @@
-package com.bridgelabz.servlets;
-
-import javax.servlet.http.HttpServlet;
-
-public class LogoutPage extends HttpServlet{
-
-}

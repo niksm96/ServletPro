@@ -18,6 +18,7 @@ public class LoginPage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		User user=new User();
@@ -28,11 +29,11 @@ public class LoginPage extends HttpServlet {
 		printWriter.write("<html><body><div id='serlvetResponse' style='text-align:center;'>");
 		RequestDispatcher requestDispatcher = null;
 		try {
-			boolean result=UserDatabase.loginUser(user);
-			if (result) {
+			User userDetails=UserDatabase.loginUser(user);
+			if (userDetails!=null) {
 				HttpSession session=request.getSession();  
-			    session.setAttribute("name",username);  
-			    session.setMaxInactiveInterval(30*60);
+			    session.setAttribute("name",userDetails);  
+			    session.setMaxInactiveInterval(30*10);
 				Cookie ck=new Cookie("uname", username);
 				ck.setMaxAge(30*60);
 				response.addCookie(ck);

@@ -40,7 +40,7 @@ public class UserDatabase {
 		connection.close();
 	}
 
-	public static boolean loginUser(User user) throws ClassNotFoundException, SQLException {
+	public static User loginUser(User user) throws ClassNotFoundException, SQLException {
 		String selectQuery = "select * from User where emailid=? and password=?";
 		Connection connection = getMyConnection();
 		PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
@@ -48,12 +48,32 @@ public class UserDatabase {
 		preparedStatement.setString(2, user.getPassword());
 		ResultSet resultSet = preparedStatement.executeQuery();
 		while(resultSet.next()) {
-			return true;
+			User userDetails=new User();
+			userDetails.setFirstName(resultSet.getString(2));
+			userDetails.setLastName(resultSet.getString(3));
+			userDetails.setContact(resultSet.getLong(4));
+			userDetails.setEmailId(resultSet.getString(5));
+			userDetails.setPassword(resultSet.getString(6));
+			return userDetails;
 		}
 		resultSet.close();
 		preparedStatement.close();
 		connection.close();
-		return false;
+		return null;
 
+	}
+	
+	public static int editUser(User user) throws ClassNotFoundException, SQLException {
+		String updateQuery="update User set firstName=?, lastName=?, contact=? where emailid=?";
+		int updatedRows = 0;
+		Connection connection = getMyConnection();
+		PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
+		preparedStatement.setString(1, user.getFirstName());
+		preparedStatement.setString(2, user.getLastName());
+		preparedStatement.setLong(3, user.getContact());
+		preparedStatement.setString(4, user.getEmailId());
+		updatedRows = preparedStatement.executeUpdate();
+		connection.close();
+		return updatedRows;
 	}
 }

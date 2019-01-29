@@ -15,3 +15,4 @@
 2019-01-28 17:44:09,562 [Worker-123: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-coyote/8.5.37/tomcat-coyote-8.5.37-sources.jar
 2019-01-28 18:06:12,359 [Worker-125: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-jasper/8.5.37/tomcat-jasper-8.5.37-sources.jar
 2019-01-28 18:06:13,519 [Worker-125: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-jasper/8.5.37/tomcat-jasper-8.5.37-sources.jar
+2019-01-29 09:18:27,632 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

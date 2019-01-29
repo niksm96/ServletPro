@@ -3,18 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
+<style>
+.container {
+	background: gray;
+	border: 5px solid #42464b;
+	border-radius: 6px;
+	height: 300px;
+	margin: 10px auto 0;
+	width: 400px;
+	color: blue;
+	background-color:yellow;
+}
+button {
+  background-color: aqua;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 16px;
+  align-self: center;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=text], input[type=username] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+</style>
 </head>
 <body>
-<form action="login" method="post">
-Email-ID:<br>
-<input type="text" name="username"/><br>
-Password:<br>
-<input type="text" name="password"/><br>
-<button type="submit" value="login">Login</button>
-<div>
-<a href="Index2.html">Sign Up</a>
-</div>
+	<div class="container">
+		<form action="login" method="post">
+			<label>Email-ID:<br> <input type="text" name="username" /><br></label>
+			<label>Password:<br> <input type="text" name="password" /><br></label>
+			<button type="submit" value="login">Login</button>
+			<a href="Index2.html">Sign Up</a>
 
-</form>
+		</form>
+	</div>
+
 </body>
 </html>

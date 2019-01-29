@@ -1,9 +1,7 @@
 package com.bridgelabz.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -27,27 +25,30 @@ public class LogoutPage extends HttpServlet {
 //				"</form>");
 //		response.sendRedirect("Index.html");
 //		printWriter.close();
+
 		response.setContentType("text/html");
 		Cookie loginCookie = null;
 		Cookie[] cookies = request.getCookies();
 		if (cookies != null) {
 			for (Cookie cookie : cookies) {
-				if (cookie.getName().equals("uname")) {
-					loginCookie = cookie;
-					break;
+				if (cookie.getName().equals("uname")|| cookie.getName().equals("JSESSIONID")) {
+					cookie.setMaxAge(0);
+					cookie.setValue(null);
+					response.addCookie(cookie);
 				}
 			}
 		}
-
-		if (loginCookie != null) {
-			loginCookie.setMaxAge(0);
-			response.addCookie(loginCookie);
-		}
+//
+//		if (loginCookie != null) {
+//			loginCookie.setMaxAge(0);
+//			response.addCookie(loginCookie);
+//		}
 		HttpSession session = request.getSession(false);
 //    	System.out.println("User="+session.getAttribute("name"));
     	if(session != null){
+    		session.removeAttribute("name");
     		session.invalidate();
+    		response.sendRedirect("index.jsp");
     	}
-		response.sendRedirect("Index.html");
 	}
 }
